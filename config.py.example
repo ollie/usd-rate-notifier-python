@@ -1,0 +1,12 @@
+# Your Open Exchange Rates App ID, https://openexchangerates.org/.
+app_id = 'your-app-id'
+
+# Some e-mail settings.
+smtp_settings = {
+  'host':     'smtp.gmail.com',
+  'port':     587,
+  'username': 'your.username@example.org',
+  'password': 'your password',
+  'from':     'your.email@example.org',
+  'to':       'your.email@example.org',
+}
