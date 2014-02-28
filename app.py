@@ -6,6 +6,7 @@ from notifier import Notifier
 
 def main():
   logging.basicConfig(
+    filename = 'info.log',
     level    = logging.DEBUG,
     format   = '%(asctime)s - %(levelname)s - %(message)s'
   )
