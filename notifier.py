@@ -51,9 +51,11 @@ class Notifier:
     Sends the actual message.
     '''
     logging.info('Sending message')
-    with SMTP() as smtp:
-      smtp.connect(self.settings['host'], self.settings['port'])
-      smtp.ehlo()
-      smtp.starttls()
-      smtp.login(self.settings['username'], self.settings['password'])
-      smtp.send_message(message)
+
+    smtp = SMTP()
+    smtp.connect(self.settings['host'], self.settings['port'])
+    smtp.ehlo()
+    smtp.starttls()
+    smtp.login(self.settings['username'], self.settings['password'])
+    smtp.send_message(message)
+    smtp.quit()
