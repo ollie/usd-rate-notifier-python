@@ -9,7 +9,7 @@ class Api:
   '''
 
   api_url         = 'http://openexchangerates.org'
-  latest_endpoint = '/api/latest.json' # ?app_id=
+  latest_endpoint = '/api/latest.json'
 
   def __init__(self, app_id):
     '''
