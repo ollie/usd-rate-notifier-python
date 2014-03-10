@@ -1,8 +1,9 @@
 import logging
 import config
 
-from api      import Api
-from notifier import Notifier
+from json_api      import JsonApi
+from cnb_text_file import CnbTextFile
+from notifier      import Notifier
 
 def main():
   logging.basicConfig(
@@ -13,7 +14,12 @@ def main():
 
   logging.info('Start')
 
-  client     = Api(config.app_id)
+  # JSON API
+  # client     = JsonApi(config.app_id)
+  # latest_czk = client.get_latest_usd_to_czk_rate()
+
+  # cnb.cz text file
+  client     = CnbTextFile()
   latest_czk = client.get_latest_usd_to_czk_rate()
   # latest_czk = 19.82228 # Debug
 

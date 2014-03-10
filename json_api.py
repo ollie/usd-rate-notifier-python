@@ -2,7 +2,7 @@ import logging
 import httplib2
 import json
 
-class Api:
+class JsonApi:
   '''
   Open Exchange Rates API.
   You will need an App ID for access.
@@ -22,7 +22,7 @@ class Api:
     Connects to the API server and fetches
     latest USD to CZK exchange rate.
     '''
-    data = self.get_data(self.latest_url())
+    data     = self.get_data(self.latest_url())
     czk_rate = data['rates']['CZK']
     return czk_rate
 
